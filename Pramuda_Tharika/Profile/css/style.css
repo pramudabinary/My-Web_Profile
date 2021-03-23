@@ -1,0 +1,1363 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+/*-----------------------------Header Section---------------------------------*/
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#header .header {
+    min-height: 8vh;
+    background-color: rgba(31, 30, 30, 0.24);
+}
+
+#header .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 15px;
+    /*max-width: 1300px;*/
+    padding: 0 10px;
+}
+
+#header .nav-list ul {
+    list-style: none;
+    position: absolute;
+    background-color: rgb(31, 30, 30);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5s ease left;
+}
+
+#header .nav-list ul.active {
+    left: 0;
+
+}
+
+#header .nav-list ul a {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    display: block;
+}
+
+#header .nav-list ul a::after {
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%) scale(0);
+    color: rgba(240, 248, 255, 0.021);
+    font-size: 13rem;
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: .3s ease letter-spacing;
+}
+
+#header .nav-list ul li:hover a::after {
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: initial;
+}
+
+#header .nav-list ul li:hover a {
+    color: crimson;
+
+}
+
+#header .nav-list ul {
+    position: absolute;
+    top: 7px;
+    /*bottom: 10px;*/
+    left: 630px;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+}
+
+#header .nav-list ul li {
+    display: inline-block;
+}
+
+#header .nav-bar ul li a {
+    word-spacing: 10px;
+    font-size: 1.5rem;
+}
+
+#header .nav-bar ul {
+    position: relative;
+    left: 15px;
+    top: 18px;
+    margin: 20px;
+}
+
+
+#header .nav-list ul a:after {
+    display: none;
+}
+
+#header .brand a h1 {
+    font-size: 30px;
+    /*margin-top: 100px;*/
+    color: white;
+    margin-top: 66px;
+    font-family: 'Proza Libre', sans-serif;
+}
+
+/*-----------------------------Header End Section---------------------------------*/
+
+/*-----------------------------------welcome section----------------------------------------------*/
+#welcome {
+    background-image: url("../asserts/clint-patterson-dYEuFB8KQJk-unsplash.jpg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+#welcome .welcome-container {
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#welcome .welcome-container .fnav ul {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+#welcome .welcome-container .fnav ul li span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin: 10px;
+    text-transform: uppercase;
+    display: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    left: 200px;
+}
+
+#welcome .welcome-container .fnav {
+    position: absolute;
+    right: 0px;
+    bottom: 120px;
+    width: 65px;
+    /*height: 0;*/
+    margin-top: 150px;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.fnav li {
+    height: 50px;
+    position: relative;
+}
+
+.fnav li a {
+    left: 20px;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.fnav li:nth-child(1) a {
+    background: #00acee;
+}
+
+.fnav li:nth-child(2) a {
+    background: #333;
+}
+
+.fnav li:nth-child(3) a {
+    background: red;
+}
+
+.fnav li:nth-child(4) a {
+    background: orange;
+}
+
+.fnav li:nth-child(5) a {
+    background: #0e76a8;
+}
+
+.fnav li:nth-child(6) a {
+    background: red;
+}
+
+.fnav li:nth-child(7) a {
+    background: orangered;
+}
+
+.fnav li:nth-child(8) a {
+    background: #ff4301;
+}
+
+.fnav li a i {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 27px;
+}
+
+.fnav li a:hover {
+    float: right;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .3);
+    z-index: 1;
+    width: 200px;
+}
+
+.fnav .twi {
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: none;
+    font-size: 20px;
+}
+
+.fnav li a:hover span {
+    float: left;
+    display: block;
+    padding-left: 30px;
+}
+
+#welcome::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    opacity: .7;
+    z-index: -1;
+}
+
+#welcome .hi {
+    position: relative;
+    top: 33px;
+    right: 565px;
+}
+
+#welcome h2 {
+    display: block;
+    width: fit-content;
+    font-size: 20px;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: .5s;
+}
+
+#welcome h2:nth-child(1) {
+    animation-delay: 1.5s;
+}
+
+#welcome h2:nth-child(2) {
+    animation-delay: 2.5s;
+}
+
+#welcome h2:nth-child(3) {
+    animation-delay: 3.5s;
+}
+
+#welcome h2 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+
+#welcome h2:nth-child(1) span {
+    animation-delay: 1s;
+}
+
+#welcome h2:nth-child(2) span {
+    animation-delay: 2s;
+}
+
+#welcome h2:nth-child(3) span {
+    animation-delay: 3s;
+}
+
+#welcome .cta {
+    right: 547px;
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#welcome .cta:hover {
+    color: black;
+    background-color: crimson;
+}
+
+#welcome h2 {
+    font-size: 30px;
+}
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+
+@keyframes animate {
+    0%, 100% {
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 200px #00b3ff,
+        0 0 300px #00b3ff,
+        0 0 400px #00b3ff;
+    }
+    5%, 95% {
+        color: #111;
+        filter: blur(0px);
+        text-shadow: 0 0 10px snow;
+    }
+}
+
+#welcome .mtitle h1 {
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-size: 20px;
+}
+
+@media all and (min-width: 320px) and (max-width: 375px) {
+    #welcome {
+        background-image: url("../asserts/clint-patterson-dYEuFB8KQJk-unsplash.jpg");
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        margin-bottom: 0px;
+    }
+
+    #welcome .welcome-container {
+        min-height: 100vh;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #welcome .fnav {
+        display: none;
+    }
+
+    #welcome .hi {
+        position: relative;
+        top: 33px;
+        right: 80px;
+    }
+
+    #welcome .hi h2 {
+        display: block;
+        width: fit-content;
+        font-size: 10px;
+        position: relative;
+        color: transparent;
+        animation: text_reveal .5s ease forwards;
+        animation-delay: 1.5s;
+    }
+
+    #welcome .hi h2:nth-child(1) {
+        animation-delay: 2.5s;
+    }
+
+    #welcome .hi h2:nth-child(2) {
+        animation-delay: 3s;
+    }
+
+    #welcome .hi h2:nth-child(3) {
+        animation-delay: 3.5s;
+    }
+
+    #welcome .hi .cta {
+        right: 547px;
+        display: inline-block;
+        padding: 10px 30px;
+        color: white;
+        background-color: transparent;
+        border: 2px solid white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        margin-top: 10px;
+        transition: .3s ease;
+        transition-property: background-color, color;
+    }
+
+    #welcome .hi .cta:hover {
+        color: black;
+        background-color: crimson;
+    }
+
+    #welcome .hi h2 {
+        font-size: 30px;
+    }
+
+    #welcome .hi h2 span {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: crimson;
+        animation: text_reveal_box 1s ease;
+        animation-delay: 1.5s;
+    }
+
+    #welcome .hi h2:nth-child(1) span {
+        animation-delay: 2s;
+    }
+
+    #welcome .hi h2:nth-child(2) span {
+        animation-delay: 2.5s;
+    }
+
+    #welcome .hi h2:nth-child(3) span {
+        animation-delay: 3s;
+    }
+
+    @keyframes text_reveal_box {
+        50% {
+            width: 100%;
+            left: 0;
+        }
+        100% {
+            width: 0;
+            left: 100%;
+        }
+    }
+
+    @keyframes text_reveal {
+        100% {
+            color: white;
+        }
+    }
+
+
+    @keyframes animate {
+        0%, 100% {
+            color: #fff;
+            filter: blur(2px);
+            text-shadow: 0 0 10px #00b3ff,
+            0 0 20px #00b3ff,
+            0 0 40px #00b3ff,
+            0 0 80px #00b3ff,
+            0 0 120px #00b3ff,
+            0 0 200px #00b3ff,
+            0 0 300px #00b3ff,
+            0 0 400px #00b3ff;
+        }
+        5%, 95% {
+            color: #111;
+            filter: blur(0px);
+            text-shadow: 0 0 10px snow;
+        }
+    }
+    #header .brand a {
+        position: absolute;
+        bottom: -24px;
+        left: 18px;
+    }
+
+    .menu {
+        width: 35px;
+        height: 30px;
+        margin: 52px 0 20px 20px;
+        cursor: pointer;
+        bottom: 20px;
+    }
+
+    .bar {
+        height: 5px;
+        width: 100%;
+        background-color: white;
+        display: block;
+        border-radius: 5px;
+    }
+
+    #bar1 {
+        transform: translateY(-4px);
+    }
+
+    #bar3 {
+        transform: translateY(4px);
+    }
+
+
+    #welcome .welcome-container .rnav ul {
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    #welcome .welcome-container .rnav ul li span {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        margin: 10px;
+        text-transform: uppercase;
+        display: none;
+        font-weight: bold;
+        letter-spacing: 1px;
+        left: 200px;
+    }
+
+    #welcome .welcome-container .rnav {
+        position: absolute;
+        right: 0px;
+        bottom: 80px;
+        width: 65px;
+        /*height: 0;*/
+        margin-top: 150px;
+        box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .rnav li {
+        height: 50px;
+        position: relative;
+    }
+
+    .rnav li a {
+        left: 20px;
+        color: white;
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 60px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+
+    .rnav li:nth-child(1) a {
+        background: #00acee;
+    }
+
+    .rnav li:nth-child(2) a {
+        background: #333;
+    }
+
+    .rnav li:nth-child(3) a {
+        background: red;
+    }
+
+    .rnav li:nth-child(4) a {
+        background: orange;
+    }
+
+    .rnav li:nth-child(5) a {
+        background: #0e76a8;
+    }
+
+    .rnav li:nth-child(6) a {
+        background: red;
+    }
+
+    .rnav li:nth-child(7) a {
+        background: orangered;
+    }
+
+    .rnav li:nth-child(8) a {
+        background: #ff4301;
+    }
+
+    .rnav li a i {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 27px;
+    }
+
+    .rnav li a:hover {
+        float: right;
+        box-shadow: 0 0 1px rgba(0, 0, 0, .3);
+        z-index: 1;
+        width: 200px;
+    }
+
+    .rnav .twi {
+        color: black;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: none;
+        font-size: 20px;
+    }
+
+    .rnav li a:hover span {
+        float: left;
+        display: block;
+        padding-left: 30px;
+    }
+
+}
+
+/*---------------------------------welcome end section--------------------------------*/
+
+/*---------------------------------profile section--------------------------------*/
+#profile {
+    background-size: cover;
+    background-color: darkslategrey;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 10px;
+}
+
+#profile .profile-container {
+    position: relative;
+    max-width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    border: 10px red;
+    width: 50%;
+    height: 500px;
+    padding: 15px;
+    background-clip: padding-box;
+}
+
+#profile .title h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    margin: 20px;
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+#profile .profile-container .img {
+    position: absolute;
+    margin: 40px;
+    left: 35px;
+    left: 0;
+    max-width: 26%;
+    bottom: 160px;
+    margin-left: 160px;
+    height: 150px;
+}
+
+#profile .profile-container .title .info {
+    border: 2px solid black;
+    position: absolute;
+    font-size: 22px;
+    border: 1px;
+    bottom: 0;
+    margin: 45px;
+}
+
+@media all and (min-width: 320px) and (max-width: 375px) {
+    #profile .profile-container {
+        width: 80%;
+        height: 300px;
+        position: relative;
+        bottom: 30px;
+
+    }
+
+    #profile .title h1 {
+        font-family: 'Julius Sans One', sans-serif;
+        margin: 20px;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    #profile .profile-container .img {
+        position: absolute;
+        margin: 40px;
+        left: 35px;
+        left: 0;
+        max-width: 26%;
+        bottom: 160px;
+        margin-left: 160px;
+        height: 150px;
+    }
+
+    #profile .profile-container .title .info {
+        border: 1px solid black;
+        position: absolute;
+        /*width: 10px;*/
+        font-size: 20px;
+        border: 1px;
+        /*top: 0;*/
+        top: 100px;
+        /*margin: 45px;*/
+    }
+
+    #profile .profile-container .info p {
+        justify-content: center;
+        font-size: 10px;
+        display: block;
+    }
+}
+
+/*-------------------0----profile end section--------------------*/
+
+/*-----------------------education section--------------------*/
+#education {
+    padding-bottom: 5px;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    background-color: darkgrey;
+}
+
+#education .education-container {
+    position: relative;
+    left: 378px;
+    top: 68px;
+    max-width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    border: 10px red;
+    width: 50%;
+    height: 500px;
+    padding: 15px;
+    background-clip: padding-box;
+}
+
+#education .education-container .img {
+}
+
+#education .education-container .title {
+    margin-left: 18px;
+    display: inline-block;
+}
+
+#education .education-container .title h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 35px;
+    margin: 5px;
+}
+
+#education .education-container .info {
+    position: absolute;
+    margin: 80px;
+    margin-left: 20px;
+    left: 15px;
+    bottom: 2px;
+    align-content: center;
+    right: 0;
+    align-content: center;
+    /*left: 0;*/
+}
+
+#education .education-container .info h1 {
+    font-family: 'Montserrat', sans-serif;
+    /*font-weight: bold;*/
+    font-size: 20px;
+    margin: 10px;
+}
+
+@media all and (min-width: 320px) and (max-width: 375px) {
+    #education .education-container {
+        width: 80%;
+        height: 300px;
+        position: relative;
+        bottom: 30px;
+    }
+}
+
+
+/*-----------------education end Section----------------------------------*/
+
+/*-----------------Skills Section----------------------------------*/
+#skills {
+    background-size: cover;
+    background-color: darkslategrey;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding-top: 10px;
+}
+
+#skills .skills-container {
+    position: relative;
+    max-width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    border: 10px red;
+    width: 50%;
+    height: 380px;
+    padding: 15px;
+    background-clip: padding-box;
+}
+
+#skills .skills-container h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin: 20px;
+    margin-top: 2px;
+}
+
+.skillsbox {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.skillsbox p {
+    color: black;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    padding: 0;
+    font-family: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.skillsbox p:nth-child(2) {
+    float: right;
+    position: relative;
+    top: -25px;
+}
+
+.skills {
+    background: #262626;
+    padding: 4px;
+    box-sizing: border-box;
+    border: 1px solid #0fffb7;
+    border-radius: 4px;
+}
+
+.skill-level {
+    background: #0fffb7;
+    width: 100%;
+    height: 10px;
+}
+
+@media all and (min-width: 320px) and (max-width: 375px) {
+    #skills .skills-container {
+        position: relative;
+        max-width: 600px;
+        padding: 50px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        overflow: hidden;
+        border: 10px red;
+        width: 50%;
+        height: 400px;
+        padding: 15px;
+        background-clip: padding-box;
+    }
+
+    #skills .skills-container h1 {
+        font-family: 'Julius Sans One', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        margin: 20px;
+        margin-top: 2px;
+    }
+
+
+}
+
+/*--------------------Skills End Section-----------------------*/
+/*--------------------Assignment Section-----------------------*/
+#assignments {
+    background-size: cover;
+    background-color: black;
+    overflow: hidden;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#assignments .titleAssignmnets h1 {
+    font-size: 35px;
+    color: white;
+    margin: 60px 10px;
+}
+
+#assignments .assignment-container {
+    width: 100px;
+    height: 50px;
+    /*display: inline;*/
+}
+
+#assignments .a1 {
+    border: 2px solid white;
+    display: block;
+    width: 40vh;
+    height: 25vh;
+    position: relative;
+    top: 10vh;
+    left: 10vh;
+}
+
+#assignments .a2 {
+    border: 2px solid white;
+    display: block;
+    width: 40vh;
+    height: 25vh;
+    position: relative;
+    left: 60vh;
+    bottom: 15vh;
+}
+
+#assignments .a3 {
+    border: 2px solid white;
+    display: block;
+    width: 40vh;
+    height: 25vh;
+    position: relative;
+    bottom: 15vh;
+    left: 111vh;
+    bottom: 40vh;
+}
+
+#assignments .a4 {
+    border: 2px solid white;
+    display: block;
+    width: 40vh;
+    height: 25vh;
+    position: relative;
+    bottom: 65vh;
+    left: 162vh;
+}
+
+#assignments .a1 h2 {
+    font-size: 25px;
+    margin: 20px 30px;
+}
+
+#assignments .a1 h1 {
+    margin: 20px 20px;
+}
+
+#assignments .a2 h2 {
+    font-size: 25px;
+    margin: 20px 30px;
+}
+
+#assignments .a2 h1 {
+    margin: 20px 15px;
+}
+
+#assignments .a3 h2 {
+    font-size: 25px;
+    margin: 20px 30px;
+}
+
+#assignments .a3 h1 {
+    margin: 20px 25px;
+}
+
+#assignments .a4 h2 {
+    font-size: 25px;
+    margin: 20px 30px;
+}
+
+#assignments .a4 h1 {
+    margin: 20px 30px;
+}
+
+#assignments .btnMore {
+    color: white;
+}
+
+/*--------------------Assignment End Section-----------------------*/
+
+
+/*----------------------Projects Section-------------------------------------------------*/
+#projects {
+    padding-top: 0.5px;
+    background-size: cover;
+    background-color: darkgrey;
+    overflow: hidden;
+    /*background-image: url("../asserts/");*/
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#projects .projects-container {
+    align-content: center;
+}
+
+#projects .projects-container .ptitle h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#projects .projects-container .proinfo img {
+    width: 150px;
+    height: 150px;
+    margin: 40px;
+    border-radius: 20px;
+    background-size: contain;
+    display: inline;
+    justify-content: space-between;
+
+}
+
+#projects .projects-container .proinfo img:nth-child(3) {
+    width: 100px;
+    height: 100px;
+}
+
+#projects .projects-container .proinfo h1:nth-child(1) {
+    margin-bottom: 200px;
+    padding: 20px;
+}
+
+#projects .projects-container .proinfo a {
+    position: relative;
+    left: 45px;
+    display: inline-block;
+    padding: 10px 30px;
+    color: black;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#projects .projects-container .proinfo {
+    display: inline-block;
+    margin: 100px;
+    margin-top: 20px;
+}
+
+#projects .projects-container .btn {
+    display: inline-block;
+}
+
+#projects .btn a {
+    position: relative;
+    left: 562px;
+    display: inline-block;
+    padding: 10px 30px;
+    color: black;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#projects .inform .btn {
+    position: relative;
+    bottom: 39px;
+    left: 2px;
+}
+
+#projects .proinfo .pro {
+    position: relative;
+    right: 20px;
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#projects .projects-container .inform .proinfo .pro:hover {
+    color: black;
+    background-color: crimson;
+}
+
+#projects .projects-container .inform .more {
+    position: relative;
+    right: 20px;
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#projects .projects-container .inform .more:hover {
+    color: black;
+    background-color: crimson;
+}
+
+/*----------------------Projects End Section---------------------------------*/
+
+/*------------------------------Contacts section----------------------------*/
+#contacts {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: darkslategrey;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#contacts .subject {
+    padding: 3px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+#contacts .contact-form {
+    max-width: 700px;
+    position: relative;
+    top: 70px;
+    right: 15px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 0 10px;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
+.input-fields,
+.msg {
+    width: 70%;
+}
+
+.input-fields .input,
+.msg textarea {
+    margin: 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #c5ecfd;
+    padding: 10px;
+    color: #c5ecfd;
+    width: 100%;
+}
+
+.msg textarea {
+    height: 222px;
+}
+
+::-webkit-input-placeholder {
+    color: #c5ecfd;
+}
+
+.btnn {
+    background: #39b7dd;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .msg textarea {
+        height: 80px;
+    }
+
+    .input-fields,
+    .msg {
+        width: 100%;
+    }
+}
+
+/*------------------------------Contacts End section----------------------------*/
+
+/*------------------footer--------------------------------------*/
+#footer {
+    background: #fcfcfc;
+}
+
+footer {
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 3.5rem;
+    /*margin-bottom: 22px;*/
+    padding-bottom: 10px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    /*margin-bottom: 10px;*/
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i {
+    font-size: 2rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: aqua;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+/*------------------End footer--------------------------------------*/
